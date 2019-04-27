@@ -1,6 +1,7 @@
 # The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 #
 # Find the sum of all the primes below two million.
+import math
 
 def isPrime(num):
     for i in range(2, num-1):
@@ -17,6 +18,7 @@ def sumPrimes(num):
 
     for i in range(2, num):
         if (i%2 != 0 and isPrime(i)):
+            print i
             sum_of_primes += i
         else:
             continue
@@ -24,5 +26,5 @@ def sumPrimes(num):
     return sum_of_primes
 
 if __name__ == '__main__':
-    sum = sumPrimes(2000000)
+    sum = sumPrimes(10)
     print sum
